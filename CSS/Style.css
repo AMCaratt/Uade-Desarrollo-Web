@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #004080;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #004080;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav.navbar {
+    padding: 10px 0;
+    color: #004080;
+  }
+  
+  nav.navbar .navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav.navbar .navbar-nav .nav-link {
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+  }
+  
+  nav.navbar .navbar-nav .nav-link:hover {
+    color: #004080;
+    border-bottom-color: #004080;
+  }
+  
+  main {
+    flex: 1;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #003366;
+  }
+  
+  .table-responsive {
+    margin-bottom: 2rem;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd;
+  }
+  
+  .table-bordered thead th {
+    background-color: #004080;
+    color: white;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+  }
+  
+  .card-title {
+    color: #004080;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-body ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .card-body ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  body.sobre-mi footer {
+    background-color: #004080; /* Azul oscuro para el footer de "Sobre mí" */
+  }
+  body.sobre-mi {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  body.sobre-mi main {
+    flex: 1;
+  }
+  body.sobre-mi footer {
+    background-color: #004080; /* Azul oscuro para el footer de "Sobre mí" */
+  }
+  .formulario-contacto {
+    background-color: #f0f8ff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 100%;
+    border: 1px solid #b0e0e6;
+  }
+  
+  .formulario-contacto h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .formulario-contacto .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .formulario-contacto label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .formulario-contacto input[type="text"],
+  .formulario-contacto input[type="email"],
+  .formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #004080;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formulario-contacto input[type="text"]:focus,
+  .formulario-contacto input[type="email"]:focus,
+  .formulario-contacto textarea:focus {
+    outline: none;
+    border-color: #004080;
+  }
+  
+  .formulario-contacto textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .formulario-contacto button {
+    background-color: #003366;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .formulario-contacto button:hover {
+    background-color: #004080;
+  }
+  
+  @media (max-width: 768px) {
+    .formulario-contacto {
+      width: 90%;
+    }
+  }
+  
