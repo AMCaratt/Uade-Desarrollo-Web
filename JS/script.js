@@ -78,12 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar feedback general basado en la validación
         if (!formIsValid) {
             showFeedbackMessage('Por favor, corrige los errores en el formulario.', 'error');
-            // Añadir la clase was-validated de Bootstrap para mostrar todos los mensajes de invalid-feedback a la vez
+        
             contactForm.classList.add('was-validated');
         } else {
             showFeedbackMessage(`¡Gracias por tu contacto, ${nombreInput.value.trim()}! En breve te estaré respondiendo.`, 'success');
             contactForm.reset(); // Limpiar el formulario después de un envío exitoso
-            // Eliminar estados de validación de los inputs después de un envío exitoso
             nombreInput.classList.remove('is-valid');
             emailInput.classList.remove('is-valid');
             mensajeInput.classList.remove('is-valid');
