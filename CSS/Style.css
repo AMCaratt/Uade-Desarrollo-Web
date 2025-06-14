@@ -1,188 +1,237 @@
+/* Ajuste inicial del body: su color de fondo por defecto ahora es el claro */
 body {
+   height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #004080;
-    color: #333;
+    background-color: #f8f9fa; /* Fondo general CLARO del body */
+    color: #343a40;
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  header {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color: #004080;
+    z-index: 1000; /* Asegúrate de que el header esté por encima de todo */
+    background-color: #004080; /* Tu azul oscuro original para el header en modo CLARO */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+    nav.navbar {
     padding: 10px 0;
-    color: #004080;
-  }
-  
-  nav.navbar .navbar-brand {
+    /* La clase 'navbar-dark bg-primary' de Bootstrap ya maneja el color de fondo del nav,
+       y lo sobrescribiremos en el dark-mode. */
+}
+
+body.dark-mode {
+    background-color: #1a1a1a !important; /* ¡Fondo GENERAL del body en MODO OSCURO */
+    color: #f0f0f0 !important; /* Texto claro general */
+}
+
+/* HEADER Y NAVEGACIÓN EN MODO OSCURO */
+body.dark-mode header {
+    background-color: #2c3e50 !important; /* Fondo del HEADER en MODO OSCURO */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Esta regla ya la teníamos y es correcta para el fondo del nav de Bootstrap */
+body.dark-mode .navbar.bg-primary {
+    background-color: #2c3e50 !important; /* Un azul grisáceo oscuro para el navbar en modo oscuro */
+    border-bottom: 1px solid #495057; /* Un borde sutil para el navbar */
+}
+
+/* Asegura el color del texto del navbar en modo oscuro */
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-nav .nav-link {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+    color: #b0c4de !important;
+    border-bottom-color: #b0c4de !important;
+}
+nav.navbar .navbar-brand {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
-  nav.navbar .navbar-nav .nav-link {
-    color: white;
+    transition: color 0.3s ease; /* Transición para el color del texto */
+}
+
+nav.navbar .navbar-nav .nav-link {
+    color: white; /* Color blanco para los enlaces en el navbar azul */
     margin-left: 1rem;
     margin-right: 1rem;
     text-decoration: none;
     padding-bottom: 0.25rem;
     border-bottom: 2px solid transparent;
-  }
-  
-  nav.navbar .navbar-nav .nav-link:hover {
-    color: #004080;
-    border-bottom-color: #004080;
-  }
-  
-  main {
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transición */
+}
+
+nav.navbar .navbar-nav .nav-link:hover {
+    color: #f0f0f0; /* Un blanco ligeramente diferente al pasar el mouse */
+    border-bottom-color: #f0f0f0; /* Un borde blanco al pasar el mouse */
+}
+
+main {
     flex: 1;
-    padding-top: 70px;
+    padding-top: 80px;
     padding-bottom: 20px;
-    background-color: #fff;
-  }
-  
-  .container {
+    background-color: #fff; /* Fondo blanco de la sección principal en modo claro */
+    transition: background-color 0.3s ease;
+    width: 100%;
+
+}
+
+.container {
     max-width: 960px;
     margin: 0 auto;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #003366;
-  }
-  
-  .table-responsive {
+    color: #003366; /* Tu color de título original en modo claro */
+    transition: color 0.3s ease;
+}
+
+.table-responsive {
     margin-bottom: 2rem;
-  }
-  
-  .table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-  
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd;
-  }
-  
-  .table-bordered thead th {
-    background-color: #004080;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); /* Rayas claras para tablas en modo claro */
+    transition: background-color 0.3s ease;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #ddd; /* Bordes claros para tablas */
+    transition: border-color 0.3s ease;
+}
+
+.table-bordered thead th {
+    background-color: #004080; /* Fondo de encabezados de tabla azul */
     color: white;
-  }
-  
-  footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer {
     text-align: center;
     padding: 20px;
-    background-color: #004080;
+    background-color: #004080; /* Tu azul oscuro original para el footer */
     color: white;
-  }
-  
-  .card {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
-  }
-  
-  .card-title {
+    background-color: #ffffff; /* Fondo de tarjeta blanco en modo claro */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-title {
     color: #004080;
     font-size: 1.25rem;
     margin-bottom: 1rem;
-  }
-  
-  .card-body ul {
+    transition: color 0.3s ease;
+}
+
+.card-body ul {
     list-style: none;
     padding-left: 0;
-  }
-  
-  .card-body ul li {
+}
+
+.card-body ul li {
     margin-bottom: 0.5rem;
-  }
-  
-  .main-container {
+}
+
+.main-container { /* Esta clase no está siendo utilizada en tu HTML visible en la captura, pero la mantengo */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+body.sobre-mi footer {
+    background-color: #004080;
+
   }
-  body.sobre-mi footer {
-    background-color: #004080; /* Azul oscuro para el footer de "Sobre mí" */
-  }
-  body.sobre-mi {
+body.sobre-mi {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  body.sobre-mi main {
+}
+body.sobre-mi main {
     flex: 1;
-  }
-  body.sobre-mi footer {
-    background-color: #004080; /* Azul oscuro para el footer de "Sobre mí" */
-  }
-  .formulario-contacto {
-    background-color: #f0f8ff;
+}
+
+
+/* FORMULARIO DE CONTACTO - ESTILOS BASE */
+.formulario-contacto {
+    background-color: #f0f8ff; /* Fondo claro para el formulario */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 500px;
     max-width: 100%;
     border: 1px solid #b0e0e6;
-  }
-  
-  .formulario-contacto h2 {
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-contacto h2 {
     color: #003366;
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
-  }
-  
-  .formulario-contacto .form-group {
+    transition: color 0.3s ease;
+}
+
+.formulario-contacto .form-group { /* Si estás usando mb-3 de Bootstrap, esta clase podría ser redundante */
     margin-bottom: 20px;
-  }
-  
-  .formulario-contacto label {
+}
+
+.formulario-contacto label {
     display: block;
     margin-bottom: 10px;
     color: #333;
     font-weight: 700;
     font-size: 16px;
-  }
-  
-  .formulario-contacto input[type="text"],
-  .formulario-contacto input[type="email"],
-  .formulario-contacto textarea {
+    transition: color 0.3s ease;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #004080;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .formulario-contacto input[type="text"]:focus,
-  .formulario-contacto input[type="email"]:focus,
-  .formulario-contacto textarea:focus {
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.formulario-contacto input[type="text"]:focus,
+.formulario-contacto input[type="email"]:focus,
+.formulario-contacto textarea:focus {
     outline: none;
     border-color: #004080;
-  }
-  
-  .formulario-contacto textarea {
+}
+
+.formulario-contacto textarea {
     height: 150px;
     resize: vertical;
-  }
-  
-  .formulario-contacto button {
+}
+
+.formulario-contacto button {
     background-color: #003366;
     color: #fff;
     padding: 12px 25px;
@@ -192,15 +241,151 @@ body {
     font-size: 18px;
     transition: background-color 0.3s ease;
     margin-top: 10px;
-  }
-  
-  .formulario-contacto button:hover {
+}
+
+.formulario-contacto button:hover {
     background-color: #004080;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .formulario-contacto {
-      width: 90%;
+        width: 90%;
     }
-  }
+}
+
+/* --- ESTILOS PARA EL MODO OSCURO --- */
+body.dark-mode {
+    background-color: #1a1a1a; /* Fondo general más oscuro */
+    color: #f0f0f0; /* Texto claro general */
+}
+
+/* HEADER Y NAVEGACIÓN EN MODO OSCURO */
+body.dark-mode header {
+    background-color: #2c3e50; /* Un azul grisáceo oscuro para el header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode nav.navbar .navbar-brand,
+body.dark-mode nav.navbar .navbar-nav .nav-link {
+    color: #f0f0f0 !important; /* Texto claro para los enlaces del navbar */
+}
+
+body.dark-mode nav.navbar .navbar-nav .nav-link:hover {
+    color: #b0c4de !important; /* Un gris azulado claro al pasar el mouse */
+    border-bottom-color: #b0c4de !important;
+}
+
+/* Contenido PRINCIPAL EN MODO OSCURO */
+body.dark-mode main {
+    background-color: #212529; /* Fondo principal oscuro */
+}
+
+/* CONTENEDORES (CAJAS) EN MODO OSCURO */
+body.dark-mode .container {
+    background-color: #343a40; /* Contenedores oscuros */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+    border: 1px solid #495057; /* Borde sutil para el contenedor */
+}
+
+/* TÍTULOS EN MODO OSCURO */
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #f0f0f0; /* Texto claro para títulos en modo oscuro */
+}
+
+/* TABLAS EN MODO OSCURO */
+body.dark-mode table {
+    background-color: #343a40;
+    color: #f0f0f0;
+    border: 1px solid #495057;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05); /* Rayas más claras para tablas en modo oscuro */
+}
+
+body.dark-mode .table-bordered th,
+body.dark-mode .table-bordered td {
+    border: 1px solid #495057; /* Bordes oscuros para celdas */
+}
+
+body.dark-mode .table-bordered thead th {
+    background-color: #495057; /* Fondo de encabezados de tabla oscuro */
+    color: #f0f0f0;
+}
+
+/* FOOTER EN MODO OSCURO */
+body.dark-mode footer {
+    background-color: #2c3e50; /* Un azul grisáceo oscuro para el footer */
+    color: #f0f0f0;
+}
+
+/* CARDS EN MODO OSCURO */
+body.dark-mode .card {
+    background-color: #343a40;
+    border-color: #495057;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .card-title {
+    color: #f0f0f0;
+}
+
+/* FORMULARIO DE CONTACTO EN MODO OSCURO */
+body.dark-mode .formulario-contacto {
+    background-color: #343a40;
+    border: 1px solid #495057;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .formulario-contacto h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .formulario-contacto label {
+    color: #f0f0f0;
+}
+
+body.dark-mode .formulario-contacto input[type="text"],
+body.dark-mode .formulario-contacto input[type="email"],
+body.dark-mode .formulario-contacto textarea {
+    background-color: #495057;
+    color: #f0f0f0;
+    border-color: #6c757d;
+}
+
+body.dark-mode .formulario-contacto input[type="text"]:focus,
+body.dark-mode .formulario-contacto input[type="email"]:focus,
+body.dark-mode .formulario-contacto textarea:focus {
+    border-color: #00bcd4; /* Cian para focus en oscuro */
+}
+
+body.dark-mode .formulario-contacto button {
+    background-color: #007bff; }
   
+body.dark-mode .table-primary {
+    background-color: #495057 !important; /* Ajusta el encabezado de la tabla si es necesario */
+    color: #f8f9fa !important;
+}
+
+/* CARDS EN MODO OSCURO */
+body.dark-mode .card {
+    background-color: #343a40; /* Fondo oscuro para las tarjetas */
+    border-color: #495057; /* Borde oscuro para las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    color: #f0f0f0; /* ¡Color de texto general para la tarjeta! */
+}
+
+body.dark-mode .card-title {
+    color: #f0f0f0 !important; /* ¡Asegura que el título de la tarjeta sea blanco! */
+}
+
+*/
+body.dark-mode .card-text,
+body.dark-mode .card-body ul li {
+    color: #e0e0e0; /* Un blanco ligeramente menos puro para el contenido, para variar */
+}
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #f0f0f0 !important; /* Texto claro para títulos en modo oscuro */
+}
