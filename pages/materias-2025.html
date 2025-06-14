@@ -1,100 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño y Desarrollo Web</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/Style.css"> 
-    <link rel="stylesheet" href="../CSS/style2.css"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Materias 2025 - Mi Cursada</title>
+  <link rel="stylesheet" href="../CSS/Style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">   <link rel="stylesheet" href="../CSS/Style.css">
 </head>
-<body>
-    <header class="hero-header">
-        <div class="overlay"></div>
-        <div class="container text-center text-white z-1 position-relative">
-            <h1 class="display-3">Diseño y Desarrollo Web</h1>
-            <p class="lead mt-3">Información relevante para la cursada</p>
-        </div>
-    </header>
-    <main class="py-5">
-        <div class="container">
-            <nav class="nav-secundario text-center mb-5">
-                <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4">
-                    <li><a href="#fechas-examenes" class="btn btn-outline-primary btn-lg">Fechas de exámenes</a></li>
-                    <li><a href="#actividades-uvas" class="btn btn-outline-primary btn-lg">Actividades UVAs</a></li>
-                    <li><a href="#bibliografia" class="btn btn-outline-primary btn-lg">Bibliografía</a></li>
-                </ul>
-            </nav>
+<body class="materias2025">
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Mi Cursada</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="avisos.html">Avisos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="materias-2025.html">Materias 2025</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item ms-lg-3"> <button id="lightModeBtn" class="btn btn-outline-light btn-sm me-2">Modo Claro</button>
+    </li>
+    <li class="nav-item">
+        <button id="darkModeBtn" class="btn btn-dark btn-sm">Modo Oscuro</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Materias 2025</h1>
 
-            <section id="fechas-examenes" class="contenido-principal fechas p-4 my-4 rounded shadow-sm">
-                <h2 class="text-center mb-4 text-primary">Fechas de exámenes</h2>
-                <ul class="list-unstyled">
-                    <li><p class="h5"><strong>Primer Examen Parcial:</strong> <span class="badge bg-info text-dark">25/04/2025</span></p></li>
-                    <li><p class="h5"><strong>Segundo Examen Parcial:</strong> <span class="badge bg-info text-dark">13/06/2025</span></p></li>
-                    <li><p class="h5"><strong>Examen Recuperatorio – Examen Final Anticipado:</strong> <span class="badge bg-info text-dark">04/07/2025</span></p></li>
-                    <li><p class="h5"><strong>Examen Final Regular:</strong> <span class="badge bg-info text-dark">18/07/2025</span></p></li>
-                </ul>
-            </section>
-
-            <section id="actividades-uvas" class="contenido-principal actividades p-4 my-4 rounded shadow-sm">
-                <h2 class="text-center mb-4 text-primary">Actividades UVAs</h2>
-                <div class="row row-cols-1 row-cols-md-2 g-3">
-                    <div class="col">
-                        <a href="https://amcaratt.github.io/Uade-Desarrollo-Web/" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-between p-3">
-                            <span>Introducción</span>
-                            <i class="bi bi-box-arrow-up-right ms-2"></i> </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://github.com/AMCaratt/MATERIA-DESARROLLO-WEB" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-between p-3">
-                            <span>HTML etiquetas</span>
-                            <i class="bi bi-box-arrow-up-right ms-2"></i>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://github.com/AMCaratt/Uade-Desarrollo-Web" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-between p-3">
-                            <span>UVA 1 ejercicio integrador</span>
-                            <i class="bi bi-box-arrow-up-right ms-2"></i>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://github.com/AMCaratt/STAR-WARS" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-between p-3">
-                            <span>FORMATO DE TEXTO</span>
-                            <i class="bi bi-box-arrow-up-right ms-2"></i>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://github.com/AMCaratt/chichilo" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-between p-3">
-                            <span>Chichilo</span>
-                            <i class="bi bi-box-arrow-up-right ms-2"></i>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://github.com/AMCaratt/flex" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-between p-3">
-                            <span>flexbox</span>
-                            <i class="bi bi-box-arrow-up-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="bibliografia" class="contenido-principal bibliografia p-4 my-4 rounded shadow-sm">
-                <h2 class="text-center mb-4 text-primary">Bibliografía</h2>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">NIEDERST ROBBINS, Jennifer. HTML5 Pocket Reference Quick, Comprehensive, Indispensable (Pocket Reference (O'Reilly)). 5ta. Ed. EE. UU.: O'Reilly Media, 2013. ISBN: 978-1449363352</p>
-                    <footer class="blockquote-footer mt-2">Fuente recomendada por la cátedra</footer>
-                </blockquote>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer-principal py-4 bg-dark text-white text-center">
-        <p class="m-0">Curso: Nro curso / Profesora: Patricia Litovicius</p>
-        <p class="small m-0">&copy; 2025 Mi Página Web - Todos los derechos reservados</p>
-        <p class="small m-0">Diseñado por Alejandro Caratti</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <ul class="list-group">
+      <li class="list-group-item materia-item">
+        <h3>Introducción a la Algoritmia</h3>
+        <p><strong>Día:</strong> Lunes 18:30 - 20:30</p>
+        <p><strong>Modalidad:</strong> Virtual</p>
+      </li>
+      <li class="list-group-item materia-item">
+        <h3>Sistemas de Información</h3>
+        <p><strong>Día:</strong> Martes 18:30 - 20:30</p>
+        <p><strong>Modalidad:</strong> Virtual</p>
+      </li>
+      <li class="list-group-item materia-item">
+        <h3>Arquitectura de Computadores</h3>
+        <p><strong>Día:</strong> Miércoles 18:30 - 20:30</p>
+        <p><strong>Modalidad:</strong> Virtual</p>
+      </li>
+      <li class="list-group-item materia-item">
+        <h3>Marketing</h3>
+        <p><strong>Día:</strong> Jueves 18:30 - 20:30</p>
+        <p><strong>Modalidad:</strong> Virtual</p>
+      </li>
+      <li class="list-group-item materia-item">
+        <h3>Diseño y Desarrollo Web</h3>
+        <p><strong>Día:</strong> Viernes 18:30 - 20:30</p>
+        <p><strong>Modalidad:</strong> Virtual</p>
+        <a href="./Diseño y Desarrollo Web.html" target="_blank" class="btn btn-info">Enlace a la página de la materia</a>
+      </li>
+    </ul>
+  </div>
+  <footer>
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Mi Página Web - Todos los derechos reservados</p>
+      <p class="small">Diseñado por Alejandro Caratti</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../JS/script.js"></script>
 </body>
 </html>
